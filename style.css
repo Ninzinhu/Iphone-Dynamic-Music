@@ -231,4 +231,18 @@ body {
   transform: scale3d(1, -1, 1) translateZ(1px);
 }
 
-.bg
+.bg .section:last-of-type::before{
+  background: radial-gradient(85% 125% at 50% 140%, black 66,6%, transparent), radial-gradient(120% 120% at 50% 145%, hsl(calc(var(--g-h) - var(--g-hue-adjust-2, var(--g-hue-adjust, 0))), 100%, 50%) 50%, transparent), radial-gradient(150% 100% at 50% 95%, transparent 15%, hsl(calc(var(--g-h) + 5), 100%, var(--g-lightness, 100%)));
+}
+
+.notch-container{
+  position: absolute;
+  z-index: 3;
+  top: var(--pad);
+  right: var(--pad);
+  left: var(--pad);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  max-height: calc(var(--notch-radius) * 2);
+}
